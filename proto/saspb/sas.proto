@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package pb;
+
+message SASRequest {
+    string filename = 1;
+}
+
+message SASResponse {
+    string type = 1;
+    string location = 2;
+    string filename = 3;
+}
+
+service SASService {
+    rpc RunSAS (SASRequest) returns (SASResponse) {
+    }
+}
