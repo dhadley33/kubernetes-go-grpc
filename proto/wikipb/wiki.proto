@@ -15,7 +15,24 @@ message WikiResponse {
     string type = 4;
 }
 
+message SaveRequest {
+    string filename = 1;
+    string body = 2;
+    string type = 3;
+}
+
+message SaveResponse {
+    string filename = 1;
+    string location = 2;
+    string type = 3;
+}
+
 service WikiService {
     rpc WikiSAS (WikiRequest) returns (WikiResponse) {
+    }
+}
+
+service SaveService {
+    rpc SaveSAS(SaveRequest) returns (SaveResponse) {
     }
 }
