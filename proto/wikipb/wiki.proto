@@ -30,9 +30,6 @@ message SaveResponse {
 service WikiService {
     rpc WikiSAS (WikiRequest) returns (WikiResponse) {
     }
-}
-
-service SaveService {
     rpc SaveSAS(SaveRequest) returns (SaveResponse) {
     }
 }
