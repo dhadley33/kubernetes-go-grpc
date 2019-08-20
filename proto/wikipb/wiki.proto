@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package pb;
+
+message WikiRequest {
+    string filename = 1;
+    string location = 2;
+    string type = 3;
+}
+
+message WikiResponse {
+    string title = 1;
+    string body = 2;
+    string output = 3;
+    string type = 4;
+}
+
+service WikiService {
+    rpc WikiSAS (WikiRequest) returns (WikiResponse) {
+    }
+}
